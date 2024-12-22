@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Today’s Lessons | alpha</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Today’s Lessons" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The cross product" />
+<meta property="og:description" content="The cross product" />
+<link rel="canonical" href="http://localhost:4000/cross-product/2024/12/21/Lessons.html" />
+<meta property="og:url" content="http://localhost:4000/cross-product/2024/12/21/Lessons.html" />
+<meta property="og:site_name" content="alpha" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-12-21T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Today’s Lessons" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-12-21T00:00:00-05:00","datePublished":"2024-12-21T00:00:00-05:00","description":"The cross product","headline":"Today’s Lessons","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/cross-product/2024/12/21/Lessons.html"},"url":"http://localhost:4000/cross-product/2024/12/21/Lessons.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="alpha" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">alpha</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      inlineMath: [['$','$']]
+    }
+  });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> 
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Today&#39;s Lessons</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2024-12-21T00:00:00-05:00" itemprop="datePublished">Dec 21, 2024
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="the-cross-product">The cross product</h2>
+
+<p>The cross product $\times$ is one way to define the multiplication of vectors with a linear operator. Similar to the dot product, the cross product has its own geometric interpretation.</p>
+
+<p>Geometrically, the cross product of $\vec{a}$ and $\vec{b}$ in 3D is defined as:</p>
+
+<blockquote>
+  <p>$\vec{a} \times \vec{b} = $ a certain vector $\vec{c}$ orthogonal to both vectors with the magnitude of the signed area of the parallelogram with sides $\vec{a}$ and $\vec{b}$ .</p>
+</blockquote>
+
+<p>However, when it comes to actually calculating $\vec{a} \times \vec{b}$ , the technique used seems utterly disconnected from the geometric definition.</p>
+
+<blockquote>
+  <p>$\vec{a} \times \vec{b} = 
+\begin{vmatrix}
+    \hat{i} &amp; \hat{j} &amp; \hat{k} \\<br />
+    a_1 &amp; a_2 &amp; a_3 \\<br />
+    b_1 &amp; b_2 &amp; b_3
+\end{vmatrix}
+= \begin{vmatrix} a_2 &amp; a_3 \\ b_2 &amp; b_3 \end{vmatrix} \hat{i} +
+\begin{vmatrix} a_3 &amp; a_1 \\ b_3 &amp; b_1 \end{vmatrix} \hat{j} +
+\begin{vmatrix} a_1 &amp; a_2 \\ b_1 &amp; b_2 \end{vmatrix} \hat{k}
+$</p>
+</blockquote>
+
+<p>What? How is this related to the intuitive, geometric definition of the cross product? And why are the basis vectors $\hat{i}, \hat{j}, \hat{k}$ inside a determinant, of all places?</p>
+
+<p>I’ve used this formula to calculate cross products ever since I saw it in a 3Blue1Brown linear algebra video. I’ve never questioned the method since 1). The method works, 2). The method is easy to use if you already know how to calculate a 3x3 determinant, and 3). 3B1B will have a follow-up video explaining the techinque anyway.</p>
+
+<p>A week ago, though, I finally decided to finally take apart this black box and figure out how this technique arises from the geometric definition of the cross product.</p>
+
+<h2 id="finding-the-connection">Finding the connection</h2>
+
+<p>The presence of a determinant in the formula suggests a connection with geometry. After all, a determinant essentially represents the volume of a parallelepiped.</p>
+
+<blockquote>
+  <p>$ \begin{vmatrix} 
+x_1 &amp; x_2 &amp; x_3 \\ y_1 &amp; y_2 &amp; y_3 \\ z_1 &amp; z_2 &amp; z_3 
+\end{vmatrix} = $
+volume of parallelepiped bounded by vectors $\vec{x}, \vec{y}, \vec{z}$</p>
+</blockquote>
+
+<p>The volume of the parallelepiped bounded by the three vectors  $\vec{a},\ \vec{b},$ and $\vec{c}= \vec{a} \times \vec{b}$ is equal to the area of the parallelogram bounded by $\vec{a}$ and $\vec{b}$ (which we’ll call $A$) times the magnitude of $\vec{c}$. But since the magnitude of $\vec{c}$ equals $A$, the volume of the parallelepiped is equal to $A^2$.</p>
+
+\[\begin{vmatrix} 
+c_1 &amp; c_2 &amp; c_3 \\ a_1 &amp; a_2 &amp; a_3 \\ b_1 &amp; b_2 &amp; b_3 
+\end{vmatrix} =  A^2\]
+
+<p>If we expand the determinant on the left, we find that</p>
+
+\[\begin{vmatrix} a_2 &amp; a_3 \\ b_2 &amp; b_3 \end{vmatrix} c_1 +
+\begin{vmatrix} a_3 &amp; a_1\\ b_3 &amp; b_1 \end{vmatrix} c_2 +
+\begin{vmatrix} a_1 &amp; a_2 \\ b_1 &amp; b_2 \end{vmatrix} c_3
+= A^2\]
+
+<p>Now this is starting to look like our formula. Since $c_1, c_2, c_3$ are the x, y, and z components of $\vec{c}$ respectively, we can express each of those components as the dot product of $\vec{c}$ and a basis vector. This is a common technique to extract the components of a vector.</p>
+
+\[\begin{vmatrix} a_2 &amp; a_3 \\ b_2 &amp; b_3 \end{vmatrix} (\vec{c}\cdot\hat{i}) +
+\begin{vmatrix} a_3 &amp; a_1\\ b_3 &amp; b_1 \end{vmatrix} (\vec{c}\cdot\hat{j}) +
+\begin{vmatrix} a_1 &amp; a_2 \\ b_1 &amp; b_2 \end{vmatrix} (\vec{c}\cdot\hat{k})
+= A^2\]
+
+<p>Since the dot product is a linear operator, we can distribute $\vec{c}$ out of the LHS.</p>
+
+\[\vec{c} \cdot \left(
+\begin{vmatrix} a_2 &amp; a_3 \\ b_2 &amp; b_3 \end{vmatrix} \hat{i} +
+\begin{vmatrix} a_3 &amp; a_1\\ b_3 &amp; b_1 \end{vmatrix} \hat{j} +
+\begin{vmatrix} a_1 &amp; a_2 \\ b_1 &amp; b_2 \end{vmatrix} \hat{k}
+\right)
+= A^2\]
+
+<p>Now what about the RHS? Since $A$ is just the magnitude of $\vec{c}$, $A^2$ can be expressed as the dot product of $\vec{c}$ with itself.</p>
+
+\[\vec{c} \cdot \left(
+\begin{vmatrix} a_2 &amp; a_3 \\ b_2 &amp; b_3 \end{vmatrix} \hat{i} +
+\begin{vmatrix} a_3 &amp; a_1\\ b_3 &amp; b_1 \end{vmatrix} \hat{j} +
+\begin{vmatrix} a_1 &amp; a_2 \\ b_1 &amp; b_2 \end{vmatrix} \hat{k}
+\right)
+= \vec{c}\cdot\vec{c}\]
+
+<p>There is only one vector $\vec{x} = \vec{c}$ that satisfies $\vec{c}\cdot\vec{x} = \vec{c}\cdot\vec{c}$. (This can be proven using a magnitude argument or by considering the equation $\vec{c}\cdot(\vec{x}-\vec{c}) = \vec{0}$ .) Therefore, we can see that</p>
+
+\[\vec{c} \cdot \underbrace{\left(
+\begin{vmatrix} a_2 &amp; a_3 \\ b_2 &amp; b_3 \end{vmatrix} \hat{i} +
+\begin{vmatrix} a_3 &amp; a_1\\ b_3 &amp; b_1 \end{vmatrix} \hat{j} +
+\begin{vmatrix} a_1 &amp; a_2 \\ b_1 &amp; b_2 \end{vmatrix} \hat{k}
+\right)}_{\large{=\ \vec{c}}}
+= \vec{c}\cdot\vec{c}\]
+
+\[\Rightarrow
+\begin{vmatrix} a_2 &amp; a_3 \\ b_2 &amp; b_3 \end{vmatrix} \hat{i} +
+\begin{vmatrix} a_3 &amp; a_1\\ b_3 &amp; b_1 \end{vmatrix} \hat{j} +
+\begin{vmatrix} a_1 &amp; a_2 \\ b_1 &amp; b_2 \end{vmatrix} \hat{k}
+= \vec{c}\]
+
+<p>This can be symbolically rewritten as</p>
+
+\[\boxed{
+\begin{vmatrix} a_2 &amp; a_3 \\ b_2 &amp; b_3 \end{vmatrix} \hat{i} +
+\begin{vmatrix} a_3 &amp; a_1\\ b_3 &amp; b_1 \end{vmatrix} \hat{j} +
+\begin{vmatrix} a_1 &amp; a_2 \\ b_1 &amp; b_2 \end{vmatrix} \hat{k}
+= 
+\begin{vmatrix} 
+\hat{i} &amp; \hat{j} &amp; \hat{k} \\ a_1 &amp; a_2 &amp; a_3 \\ b_1 &amp; b_2 &amp; b_3 
+\end{vmatrix}
+= \vec{c}
+}\]
+
+<p>And we have arrived at our original formula.</p>
+
+
+  </div><a class="u-url" href="/cross-product/2024/12/21/Lessons.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">alpha</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">alpha</li><li><a class="u-email" href="mailto:mwlego2222@gmail.com">mwlego2222@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/michaelsoft-wendows"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">michaelsoft-wendows</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>A blog for math-related stuff for the day.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
