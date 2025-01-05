@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-12-21T20:17:03-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">alpha</title><subtitle>A blog for math-related stuff for the day.</subtitle><entry><title type="html">Today’s Lessons</title><link href="http://localhost:4000/cross-product/2024/12/21/Lessons.html" rel="alternate" type="text/html" title="Today’s Lessons" /><published>2024-12-21T00:00:00-05:00</published><updated>2024-12-21T00:00:00-05:00</updated><id>http://localhost:4000/cross-product/2024/12/21/Lessons</id><content type="html" xml:base="http://localhost:4000/cross-product/2024/12/21/Lessons.html"><![CDATA[<h2 id="the-cross-product">The cross product</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-01-04T21:17:34-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">alpha</title><subtitle>Posting cool proofs worth remembering </subtitle><entry><title type="html">Expanding $e^x$ without calculus</title><link href="http://localhost:4000/euler's/number/2025/01/04/Lessons.html" rel="alternate" type="text/html" title="Expanding $e^x$ without calculus" /><published>2025-01-04T00:00:00-05:00</published><updated>2025-01-04T00:00:00-05:00</updated><id>http://localhost:4000/euler&apos;s/number/2025/01/04/Lessons</id><content type="html" xml:base="http://localhost:4000/euler&apos;s/number/2025/01/04/Lessons.html"><![CDATA[<p>2025 🎆</p>
+
+<p>A quick proof of the taylor series of $e^x$ without using derivatives.</p>
+
+\[e^x = \lim_{n \to \infty} \left(1+\frac{x}{n}\right)^{n} \\
+\ \\
+\text{Using binomial expansion:} \\
+\ \\
+e^x = \lim_{n \to \infty} \sum_{k=0}^{n} \binom{n}{k} \cdot \frac{x^k}{n^k}  \\
+\ \\
+= \lim_{n \to \infty} \sum_{k=0}^{n} \frac{n(n-1) \ldots (n-k+1)}{k!} \cdot \frac{x^k}{n^k} \\
+\ \\
+= \sum_{k=0}^{n} \frac{x^k}{k!} \cdot \underbrace{\lim_{n \to \infty} \frac{n(n-1) \ldots (n-k+1)}{n^k}}_{=1} \\
+\ \\
+= \sum_{k=0}^{n} \frac{x^k}{k!}\]]]></content><author><name></name></author><category term="Euler&apos;s" /><category term="Number" /><summary type="html"><![CDATA[2025 🎆]]></summary></entry><entry><title type="html">Cross Product Definition</title><link href="http://localhost:4000/linear/algebra/2024/12/21/Lessons.html" rel="alternate" type="text/html" title="Cross Product Definition" /><published>2024-12-21T00:00:00-05:00</published><updated>2024-12-21T00:00:00-05:00</updated><id>http://localhost:4000/linear/algebra/2024/12/21/Lessons</id><content type="html" xml:base="http://localhost:4000/linear/algebra/2024/12/21/Lessons.html"><![CDATA[<h2 id="the-cross-product">The cross product</h2>
 
 <p>The cross product $\times$ is one way to define the multiplication of vectors with a linear operator. Similar to the dot product, the cross product has its own geometric interpretation.</p>
 
@@ -23,13 +37,7 @@
 $</p>
 </blockquote>
 
-<p>What? How is this related to the intuitive, geometric definition of the cross product? And why are the basis vectors $\hat{i}, \hat{j}, \hat{k}$ inside a determinant, of all places?</p>
-
-<p>I’ve used this formula to calculate cross products ever since I saw it in a 3Blue1Brown linear algebra video. I’ve never questioned the method since 1). The method works, 2). The method is easy to use if you already know how to calculate a 3x3 determinant, and 3). 3B1B will have a follow-up video explaining the techinque anyway.</p>
-
-<p>A week ago, though, I finally decided to finally take apart this black box and figure out how this technique arises from the geometric definition of the cross product.</p>
-
-<h2 id="finding-the-connection">Finding the connection</h2>
+<h2 id="connecting-the-definitions">Connecting the definitions</h2>
 
 <p>The presence of a determinant in the formula suggests a connection with geometry. After all, a determinant essentially represents the volume of a parallelepiped.</p>
 
@@ -106,4 +114,4 @@ c_1 &amp; c_2 &amp; c_3 \\ a_1 &amp; a_2 &amp; a_3 \\ b_1 &amp; b_2 &amp; b_3
 = \vec{c}
 }\]
 
-<p>And we have arrived at our original formula.</p>]]></content><author><name></name></author><category term="Cross-Product" /><summary type="html"><![CDATA[The cross product]]></summary></entry></feed>
+<p>And we have arrived at our original formula.</p>]]></content><author><name></name></author><category term="Linear" /><category term="Algebra" /><summary type="html"><![CDATA[The cross product]]></summary></entry></feed>
